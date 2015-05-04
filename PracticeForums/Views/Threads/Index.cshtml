@@ -1,0 +1,56 @@
+﻿@model IEnumerable<PracticeForums.Models.Thread>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@if (Request.IsAuthenticated)
+{ 
+    <p>@Html.ActionLink("Create New", "Create")</p>
+}
+else
+{
+    <p>Please Log In to post a Thread</p>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Message)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ThreadID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ThreadID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ThreadID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -9,18 +9,18 @@ namespace PracticeForums.Models
 {
     public class Comment
     {
-        [Key]
-        [Column(Order = 0)]
-        public string UserID { get; set; }
-        [Key]
-        [Column(Order = 1)]
-        public int ThreadID { get; set; }
-        public string Message { get; set; }
-        public DateTime PostTime { get; set; }
+        //Composite key prevents spammers
+        [Key, Column(Order=1)]
+        public string CMessage { get; set; }
 
-        public virtual Thread Thread { get; set; }
+        [Key, Column(Order=0)]
+        public Thread Thread { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime CPostTime { get; set; }
 
         //Each Thread can have multiple comments, sorted by date time
         //One (Thread) to many relationship
+ 
     }
 }

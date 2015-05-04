@@ -30,3 +30,7 @@ C:\Users\TylerC\Documents\Visual Studio 2013\Projects\PracticeForums\PracticeFor
 C:\Users\TylerC\Documents\Visual Studio 2013\Projects\PracticeForums\PracticeForums\obj\Debug\PracticeForums.pdb
 C:\Users\TylerC\Documents\Visual Studio 2013\Projects\PracticeForums\PracticeForums\obj\Debug\PracticeForums.Migrations.baseMigration.resources
 C:\Users\TylerC\Documents\Visual Studio 2013\Projects\PracticeForums\PracticeForums\obj\Debug\PracticeForums.csproj.GenerateResource.Cache
+C:\Users\TylerC\Documents\Visual Studio 2013\Projects\PracticeForums\PracticeForums\obj\Debug\PracticeForums.Migrations.UserNameNotID.resources
+C:\Users\TylerC\Documents\Visual Studio 2013\Projects\PracticeForums\PracticeForums\obj\Debug\PracticeForums.Migrations.UserNameNotID2.resources
+C:\Users\TylerC\Documents\Visual Studio 2013\Projects\PracticeForums\PracticeForums\obj\Debug\PracticeForums.Migrations.KeyFixThread.resources
+C:\Users\TylerC\Documents\Visual Studio 2013\Projects\PracticeForums\PracticeForums\obj\Debug\PracticeForums.Migrations.RedundantCommentUsernames.resources

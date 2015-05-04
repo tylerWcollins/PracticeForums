@@ -25,7 +25,7 @@
                     <li>@Html.ActionLink("Threads", "Index", "Threads")</li>
                 </ul>
 
-                @if (Request.IsAuthenticated)
+                @if(Request.IsAuthenticated)
                 {
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">@User.Identity.Name</a></li>

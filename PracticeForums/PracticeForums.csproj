@@ -123,6 +123,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ThreadsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Data\PracticeForumsDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -131,8 +133,25 @@
     <Compile Include="Migrations\201504241644322_baseMigration.Designer.cs">
       <DependentUpon>201504241644322_baseMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505040320264_UserNameNotID.cs" />
+    <Compile Include="Migrations\201505040320264_UserNameNotID.Designer.cs">
+      <DependentUpon>201505040320264_UserNameNotID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505040327555_UserNameNotID2.cs" />
+    <Compile Include="Migrations\201505040327555_UserNameNotID2.Designer.cs">
+      <DependentUpon>201505040327555_UserNameNotID2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505040452399_KeyFixThread.cs" />
+    <Compile Include="Migrations\201505040452399_KeyFixThread.Designer.cs">
+      <DependentUpon>201505040452399_KeyFixThread.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505040457544_RedundantCommentUsernames.cs" />
+    <Compile Include="Migrations\201505040457544_RedundantCommentUsernames.Designer.cs">
+      <DependentUpon>201505040457544_RedundantCommentUsernames.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\DiscussionViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\Thread.cs" />
     <Compile Include="Models\User.cs" />
@@ -141,6 +160,8 @@
     <Compile Include="Services\Auth\IAuthService.cs" />
     <Compile Include="Services\Encryptor\IEncryptor.cs" />
     <Compile Include="Services\Encryptor\SHA256Encryptor.cs" />
+    <Compile Include="Services\ThreadServ\IThreadService.cs" />
+    <Compile Include="Services\ThreadServ\ThreadService.cs" />
     <Compile Include="Services\User\IUserService.cs" />
     <Compile Include="Services\User\UserService.cs" />
   </ItemGroup>
@@ -182,6 +203,18 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Threads\ThreadView.cshtml" />
+    <Content Include="Views\Threads\Create.cshtml" />
+    <Content Include="Views\Threads\Delete.cshtml" />
+    <Content Include="Views\Threads\Details.cshtml" />
+    <Content Include="Views\Threads\Edit.cshtml" />
+    <Content Include="Views\Threads\Index.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Threads\AdminIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -196,6 +229,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201504241644322_baseMigration.resx">
       <DependentUpon>201504241644322_baseMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505040320264_UserNameNotID.resx">
+      <DependentUpon>201505040320264_UserNameNotID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505040327555_UserNameNotID2.resx">
+      <DependentUpon>201505040327555_UserNameNotID2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505040452399_KeyFixThread.resx">
+      <DependentUpon>201505040452399_KeyFixThread.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505040457544_RedundantCommentUsernames.resx">
+      <DependentUpon>201505040457544_RedundantCommentUsernames.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -32,7 +32,7 @@ namespace PracticeForums.Data
 
             modelBuilder.Entity<Thread>()
                             .HasMany(x => x.Comments)
-                            .WithRequired(x => x.Thread);
+                            .WithRequired(c => c.Thread);
         }
     }
 

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<PracticeForums.Models.Thread>
+
+@{
+    ViewBag.Title = "ThreadView";
+}
+
+<h2>ThreadView</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Title)*@
+            @*<a href=" ">@Html.DisplayFor(modelItem => item.Title)</a>*@
+            @Html.ActionLink(item.Title, "Details", new { id = item.ThreadID })
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Message)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostTime)
+        </td>
+        <td>
+            @*Make visible only if log in matches or is admin*@
+            @Html.ActionLink("Delete", "Delete", new { id=item.ThreadID })
+        </td>
+    </tr>
+}
+
+</table>
