@@ -34,3 +34,5 @@ C:\Users\TylerC\Documents\Visual Studio 2013\Projects\PracticeForums\PracticeFor
 C:\Users\TylerC\Documents\Visual Studio 2013\Projects\PracticeForums\PracticeForums\obj\Debug\PracticeForums.Migrations.UserNameNotID2.resources
 C:\Users\TylerC\Documents\Visual Studio 2013\Projects\PracticeForums\PracticeForums\obj\Debug\PracticeForums.Migrations.KeyFixThread.resources
 C:\Users\TylerC\Documents\Visual Studio 2013\Projects\PracticeForums\PracticeForums\obj\Debug\PracticeForums.Migrations.RedundantCommentUsernames.resources
+C:\Users\TylerC\Documents\Visual Studio 2013\Projects\PracticeForums\PracticeForums\obj\Debug\PracticeForums.Migrations.UserTableKeyFix.resources
+C:\Users\TylerC\Documents\Visual Studio 2013\Projects\PracticeForums\PracticeForums\obj\Debug\PracticeForums.Migrations.IdFixes.resources

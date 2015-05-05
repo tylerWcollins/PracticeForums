@@ -7,33 +7,68 @@
 <h2>Details</h2>
 
 <div>
-    <h4>@Html.DisplayFor(model => model.Thread.Title)</h4>
+    <h4>@Html.DisplayFor(model => model.ThreadTitle)</h4>
     <hr />
     <dl class="dl-horizontal">
 
         <dt>
-            @Html.DisplayNameFor(model => model.Thread.Message)
+            @Html.DisplayNameFor(model => model.ThreadMessage)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Thread.Message)
+            @Html.DisplayFor(model => model.ThreadMessage)
         </dd>
 
         <dd>
-            @Html.DisplayFor(model => model.Thread.Username)
+            @Html.DisplayFor(model => model.ThreadUser)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Thread.PostTime)
+            @Html.DisplayNameFor(model => model.ThreadPostTime)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Thread.PostTime)
+            @Html.DisplayFor(model => model.ThreadPostTime)
         </dd>
 
     </dl>
+
+    @if (Request.IsAuthenticated)
+    {
+        //Post new comment
+    }
+    else
+    {
+        <p>Please log in to post a Comment</p>
+    }
+
+@foreach var item in Model{
+    <d2 class="d1-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CommentUser)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CommmentUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommentPostTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CommentPostTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommentMessage)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CommentMessage)
+        </dd>
+        
+    </d2>
+    }
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ThreadID }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

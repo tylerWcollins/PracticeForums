@@ -9,7 +9,7 @@ namespace PracticeForums.Services.ThreadServ
 {
     public interface IThreadService
     {
-        List<Thread> GetPostings();
+        //List<Comment> GetComments();
 
         Thread GetThreadById(int id);
 

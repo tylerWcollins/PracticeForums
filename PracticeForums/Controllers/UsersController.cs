@@ -18,7 +18,7 @@ namespace PracticeForums.Controllers
         // GET: Users
         public ActionResult Index()
         {
-            return View(db.Users.ToList());
+                return View(db.Users.ToList());
         }
 
         // GET: Users/Details/5
@@ -47,7 +47,7 @@ namespace PracticeForums.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID,Username,Password,Email,IsAdmin")] User user)
+        public ActionResult Create([Bind(Include = "Id,Username,Password,Email,IsAdmin")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace PracticeForums.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserID,Username,Password,Email,IsAdmin")] User user)
+        public ActionResult Edit([Bind(Include = "Id,Username,Password,Email,IsAdmin")] User user)
         {
             if (ModelState.IsValid)
             {

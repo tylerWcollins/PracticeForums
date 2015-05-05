@@ -47,7 +47,7 @@ namespace PracticeForums.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ThreadID,Title,Message,UserID,PostTime")] Thread thread)
+        public ActionResult Create([Bind(Include = "Id,Title,Message,Id,PostTime")] Thread thread)
         {
             if (ModelState.IsValid)
             {
@@ -81,7 +81,7 @@ namespace PracticeForums.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ThreadID,Title,Message,UserID,PostTime")] Thread thread)
+        public ActionResult Edit([Bind(Include = "Id,Title,Message,Id,PostTime")] Thread thread)
         {
             if (ModelState.IsValid)
             {

@@ -18,7 +18,7 @@
             @Html.DisplayNameFor(model => model.Message)
         </th>*@
         <th>
-            @Html.DisplayNameFor(model => model.UserID)
+            @Html.DisplayNameFor(model => model.Id)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PostTime)
@@ -31,20 +31,20 @@
         <td>
             @*@Html.DisplayFor(modelItem => item.Title)*@
             @*<a href=" ">@Html.DisplayFor(modelItem => item.Title)</a>*@
-            @Html.ActionLink(item.Title, "Details", new { id = item.ThreadID })
+            @Html.ActionLink(item.Title, "Details", new { id = item.Id })
         </td>
         @*<td>
             @Html.DisplayFor(modelItem => item.Message)
         </td>*@
         <td>
-            @Html.DisplayFor(modelItem => item.UserID)
+            @Html.DisplayFor(modelItem => item.Id)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PostTime)
         </td>
         <td>
             @*Make visible only if log in matches or is admin*@
-            @Html.ActionLink("Delete", "Delete", new { id=item.ThreadID })
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

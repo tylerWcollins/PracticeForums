@@ -16,6 +16,8 @@ namespace PracticeForums.Models
         [Key, Column(Order=0)]
         public Thread Thread { get; set; }
 
+        public string CUsername { get; set; }
+
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime CPostTime { get; set; }
 

@@ -149,6 +149,14 @@
     <Compile Include="Migrations\201505040457544_RedundantCommentUsernames.Designer.cs">
       <DependentUpon>201505040457544_RedundantCommentUsernames.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505041858004_UserTableKeyFix.cs" />
+    <Compile Include="Migrations\201505041858004_UserTableKeyFix.Designer.cs">
+      <DependentUpon>201505041858004_UserTableKeyFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505050036385_IdFixes.cs" />
+    <Compile Include="Migrations\201505050036385_IdFixes.Designer.cs">
+      <DependentUpon>201505050036385_IdFixes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\DiscussionViewModel.cs" />
@@ -212,7 +220,6 @@
     <Content Include="Views\Users\Create.cshtml" />
     <Content Include="Views\Users\Delete.cshtml" />
     <Content Include="Views\Users\Details.cshtml" />
-    <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Threads\AdminIndex.cshtml" />
   </ItemGroup>
@@ -241,6 +248,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505040457544_RedundantCommentUsernames.resx">
       <DependentUpon>201505040457544_RedundantCommentUsernames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505041858004_UserTableKeyFix.resx">
+      <DependentUpon>201505041858004_UserTableKeyFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505050036385_IdFixes.resx">
+      <DependentUpon>201505050036385_IdFixes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

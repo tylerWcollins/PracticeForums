@@ -14,8 +14,7 @@ namespace PracticeForums.Models
             this.Comments = new List<Comment>();
         }
 
-        [Key, Column(Order=0)]
-        public int ThreadID { get; set; }
+        public int Id { get; set; }
 
         public string Title { get; set; }
 
@@ -23,7 +22,6 @@ namespace PracticeForums.Models
 
         public DateTime PostTime { get; set; }
 
-        [Key, Column(Order=1)]
         public string Username { get; set; }
 
         public virtual ICollection<Comment> Comments { get; set; }

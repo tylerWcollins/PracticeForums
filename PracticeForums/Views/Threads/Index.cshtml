@@ -6,7 +6,7 @@
 
 <h2>Index</h2>
 
-@if (Request.IsAuthenticated)
+@if (Request.IsAuthenticated) 
 { 
     <p>@Html.ActionLink("Create New", "Create")</p>
 }
@@ -14,6 +14,7 @@ else
 {
     <p>Please Log In to post a Thread</p>
 }
+@*Add Search function here*@
 <table class="table">
     <tr>
         <th>
@@ -46,9 +47,11 @@ else
             @Html.DisplayFor(modelItem => item.PostTime)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ThreadID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ThreadID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ThreadID })
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+             
+            @*Add statement checking user's Username matches thread's Username, or user's IsAdmin == true*@
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
 }
